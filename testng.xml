@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" >
+	<listeners>		<listener class-name="com.E2E.Resources.ListenToTest"></listener>	
+	</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.E2E.tests.SearchResultsPageTest"/>
+      <class name="com.E2E.tests.LandingPageTest"/>
+       <class name="com.E2E.tests.FlipkartLoginPageTest"/>
+       <class name="com.E2E.tests.FlipkartLandingPageTest"/>
+      <class name="com.E2E.tests.GroceryPageTest"/>
+      <class name="com.E2E.tests.FlipkartMobilesPageTest"/>
+       <class name="com.E2E.tests.FlipkartCartPageTest"/>
+       <class name="com.E2E.tests.FlipkartElectronics_GamingAllTest"/>
+      
+      
+     
+     
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
