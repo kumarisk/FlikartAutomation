@@ -75,9 +75,9 @@ public class FlipkartLandingPageTest extends InvokeDriver{
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();	
-		flipkartlandingpage.electronicsCategory("Electronics");
-		flipkartlandingpage.electronicsSubMenu("Gaming");
-		flipkartlandingpage.electronicsSubSubMenu("All");
+		flipkartlandingpage.hoverCategories("Electronics");
+		flipkartlandingpage.hoveredSubMenu("Gaming");
+		flipkartlandingpage.subMenuLists("All");
 		Thread.sleep(5000);
 	}
 	

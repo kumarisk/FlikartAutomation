@@ -55,7 +55,8 @@ public class InvokeDriver {
 	
 	@AfterMethod
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
+		//driver.close();
 		
 	}
 	

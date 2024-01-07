@@ -18,9 +18,9 @@ public class FlipkartElectronics_GamingAllTest extends InvokeDriver{
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();	
-		flipkartlandingpage.electronicsCategory("Electronics");
-		flipkartlandingpage.electronicsSubMenu("Gaming");
-		FlipkartElectronics_GamingAll gamingAl = flipkartlandingpage.electronicsSubSubMenu("All");
+		flipkartlandingpage. hoverCategories("Electronics");
+		flipkartlandingpage.hoveredSubMenu("Gaming");
+		FlipkartElectronics_GamingAll gamingAl = flipkartlandingpage.subMenuLists("All");
 		boolean status =gamingAl.productList();
 		Assert.assertTrue(status);
 		
@@ -33,9 +33,9 @@ public class FlipkartElectronics_GamingAllTest extends InvokeDriver{
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();	
-		flipkartlandingpage.electronicsCategory("Electronics");
-		flipkartlandingpage.electronicsSubMenu("Gaming");
-		FlipkartElectronics_GamingAll gamingAl = flipkartlandingpage.electronicsSubSubMenu("All");
+		flipkartlandingpage. hoverCategories("Electronics");
+		flipkartlandingpage.hoveredSubMenu("Gaming");
+		FlipkartElectronics_GamingAll gamingAl = flipkartlandingpage.subMenuLists("All");
 		gamingAl.productTitles("Gaming");
 		
 		

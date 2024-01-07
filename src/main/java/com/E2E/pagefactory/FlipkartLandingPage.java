@@ -161,7 +161,7 @@ public class FlipkartLandingPage extends CommonActions {
 	}
 	
 	
-	public void electronicsCategory(String cat_name) {
+	public void hoverCategories(String cat_name) {
 		for(int m=0;m<hoverCategries.size();m++) {
 			String categoryName = hoverCategries.get(m).getText();
 			if(categoryName.contains(cat_name)) {
@@ -171,7 +171,7 @@ public class FlipkartLandingPage extends CommonActions {
 		}
 	}
 	
-	public void electronicsSubMenu(String name) {
+	public void hoveredSubMenu(String name) {
 		for(int l=0;l<hoverSubCategries.size();++l) {
 			String subMenuNames = hoverSubCategries.get(l).getText();
 			if(subMenuNames.contains(name)) {
@@ -180,13 +180,14 @@ public class FlipkartLandingPage extends CommonActions {
 		}
 	}
 	
-	public FlipkartElectronics_GamingAll electronicsSubSubMenu(String subname) {
+	public FlipkartElectronics_GamingAll subMenuLists(String subname) {
 		for(int k=0;k<hoverSubSubCategries.size();++k) {
 			String subMenuNames = hoverSubSubCategries.get(k).getText();
 			if(subMenuNames.contains(subname)) {
 				mouseActions(driver).moveToElement(hoverSubSubCategries.get(k)).build().perform();
 				 hoverSubSubCategries.get(k).click();
 				 break;
+				 
 			}
 		}
 		
