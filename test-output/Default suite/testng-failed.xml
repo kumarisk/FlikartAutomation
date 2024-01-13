@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.E2E.tests.FlipkartAppliancesPageTest">
+      <class name="com.E2E.tests.GroceryPageTest">
         <methods>
           <include name="launchURL"/>
           <include name="closeBrowser"/>
-          <include name="openEveryImageAndNavigateBack"/>
+          <include name="searchForSpecificProduct"/>
+          <include name="propertiesFile"/>
         </methods>
-      </class> <!-- com.E2E.tests.FlipkartAppliancesPageTest -->
+      </class> <!-- com.E2E.tests.GroceryPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

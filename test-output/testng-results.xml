@@ -1,25 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-07T13:02:52 IST" name="Default suite" finished-at="2024-01-07T13:03:12 IST" duration-ms="20163">
+  <suite started-at="2024-01-13T15:49:47 IST" name="Suite" finished-at="2024-01-13T15:50:18 IST" duration-ms="30846">
     <groups>
+      <group name="Smoke,Sanity">
+        <method signature="FlipkartMobilesPageTest.searchSpecificMobile()[pri:0, instance:com.E2E.tests.FlipkartMobilesPageTest@38089a5a]" name="searchSpecificMobile" class="com.E2E.tests.FlipkartMobilesPageTest"/>
+        <method signature="FlipkartMobilesPageTest.selectMobileFromDefaultList()[pri:0, instance:com.E2E.tests.FlipkartMobilesPageTest@38089a5a]" name="selectMobileFromDefaultList" class="com.E2E.tests.FlipkartMobilesPageTest"/>
+      </group> <!-- Smoke,Sanity -->
     </groups>
-    <test started-at="2024-01-07T13:02:52 IST" name="Default test" finished-at="2024-01-07T13:03:12 IST" duration-ms="20163">
-      <class name="com.E2E.tests.FlipkartFashion_MenFootwear_All_Test">
-        <test-method is-config="true" signature="launchURL()[pri:0, instance:com.E2E.tests.FlipkartFashion_MenFootwear_All_Test@fa49800]" started-at="2024-01-07T13:02:52 IST" name="launchURL" finished-at="2024-01-07T13:02:57 IST" duration-ms="4897" status="PASS">
+    <test started-at="2024-01-13T15:49:47 IST" name="SearchResultsPageTest" finished-at="2024-01-13T15:49:47 IST" duration-ms="6">
+    </test> <!-- SearchResultsPageTest -->
+    <test started-at="2024-01-13T15:49:48 IST" name="flipkartLandingPageTest" finished-at="2024-01-13T15:50:18 IST" duration-ms="30355">
+      <class name="com.E2E.tests.FlipkartMobilesPageTest">
+        <test-method is-config="true" signature="launchURL()[pri:0, instance:com.E2E.tests.FlipkartMobilesPageTest@38089a5a]" started-at="2024-01-13T15:49:48 IST" name="launchURL" finished-at="2024-01-13T15:49:52 IST" duration-ms="4019" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchURL -->
-        <test-method signature="selectFashionMensFootwearAll()[pri:0, instance:com.E2E.tests.FlipkartFashion_MenFootwear_All_Test@fa49800]" started-at="2024-01-07T13:02:57 IST" name="selectFashionMensFootwearAll" finished-at="2024-01-07T13:03:12 IST" duration-ms="14477" status="PASS">
+        <test-method signature="searchSpecificMobile()[pri:0, instance:com.E2E.tests.FlipkartMobilesPageTest@38089a5a]" started-at="2024-01-13T15:49:52 IST" name="searchSpecificMobile" finished-at="2024-01-13T15:50:00 IST" duration-ms="8691" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectFashionMensFootwearAll -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.E2E.tests.FlipkartFashion_MenFootwear_All_Test@fa49800]" started-at="2024-01-07T13:03:12 IST" name="closeBrowser" finished-at="2024-01-07T13:03:12 IST" duration-ms="744" status="PASS">
+        </test-method> <!-- searchSpecificMobile -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.E2E.tests.FlipkartMobilesPageTest@38089a5a]" started-at="2024-01-13T15:50:00 IST" name="closeBrowser" finished-at="2024-01-13T15:50:01 IST" duration-ms="660" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.E2E.tests.FlipkartFashion_MenFootwear_All_Test -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method is-config="true" signature="launchURL()[pri:0, instance:com.E2E.tests.FlipkartMobilesPageTest@38089a5a]" started-at="2024-01-13T15:50:01 IST" name="launchURL" finished-at="2024-01-13T15:50:05 IST" duration-ms="4150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchURL -->
+        <test-method signature="selectMobileFromDefaultList()[pri:0, instance:com.E2E.tests.FlipkartMobilesPageTest@38089a5a]" started-at="2024-01-13T15:50:05 IST" name="selectMobileFromDefaultList" finished-at="2024-01-13T15:50:17 IST" duration-ms="12130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectMobileFromDefaultList -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.E2E.tests.FlipkartMobilesPageTest@38089a5a]" started-at="2024-01-13T15:50:17 IST" name="closeBrowser" finished-at="2024-01-13T15:50:18 IST" duration-ms="680" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.E2E.tests.FlipkartMobilesPageTest -->
+    </test> <!-- flipkartLandingPageTest -->
+    <test started-at="2024-01-13T15:50:18 IST" name="GroceryPageTest" finished-at="2024-01-13T15:50:18 IST" duration-ms="3">
+      <class name="com.E2E.tests.FlipkartMobilesPageTest">
+        <test-method is-config="true" signature="propertiesFile()[pri:0, instance:com.E2E.tests.FlipkartMobilesPageTest@38089a5a]" started-at="2024-01-13T15:49:47 IST" name="propertiesFile" finished-at="2024-01-13T15:49:47 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- propertiesFile -->
+      </class> <!-- com.E2E.tests.FlipkartMobilesPageTest -->
+    </test> <!-- GroceryPageTest -->
+  </suite> <!-- Suite -->
 </testng-results>
