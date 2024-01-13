@@ -17,16 +17,15 @@ public class GroceryPageTest extends InvokeDriver{
 	@Test
 	public void addtoCartFromDefaultProducts() throws InterruptedException {
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();
-		Object grocerpagemethods  = flipkartlandingpage.selectCategoryBasedOnInput("Grocery");
+		Object grocerpagemethods  = flipkartlandingpage.selectCategoryBasedOnInput(prop.getProperty("selectGroceryCategory"));
 		FlipkartGroceryPage grocer = (FlipkartGroceryPage)grocerpagemethods;
-		grocer.deliveryTo("560038");
+		grocer.deliveryTo(prop.getProperty("groceryDeliveryPinCode"));
 		grocer.clickOnRandomGroceryImage();
-		String product = "AASHIRVAAD Atta with Multigrains";
-		grocer.addToCart(product);
+		grocer.addToCart(prop.getProperty("groceryProduceName"));
 		
 		
 /*
@@ -47,12 +46,12 @@ public class GroceryPageTest extends InvokeDriver{
 	@Test(retryAnalyzer = RetryFailedCases.class)
 	public void searchForSpecificProduct() throws InterruptedException {
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();
 		FlipkartGroceryPage flipkartgrocerypage = flipkartlandingpage.selectGrocery();
-		flipkartgrocerypage.searchForProduct("almonds");
+		flipkartgrocerypage.searchForProduct(prop.getProperty("searchSpecificGroceryProduce"));
 		Assert.assertTrue(false);
 	}
 

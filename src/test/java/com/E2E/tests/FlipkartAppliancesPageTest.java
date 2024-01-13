@@ -13,11 +13,11 @@ public class FlipkartAppliancesPageTest extends InvokeDriver{
 	@Test
 	public void openEveryImageAndNavigateBack() throws InterruptedException {
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();
-		Object applianceses  = flipkartlandingpage.selectCategoryBasedOnInput("Appliances");
+		Object applianceses  = flipkartlandingpage.selectCategoryBasedOnInput(prop.getProperty("selectAppliancesCategory"));
 		FlipkartAppliancesPage appliance = (FlipkartAppliancesPage)applianceses;
 		appliance.openeachlinkInNewTab();
 	}

@@ -15,12 +15,12 @@ public class FlipkartCartPageTest extends InvokeDriver{
 	@Test
 	public void verfiyProductAddedToCartPage() throws InterruptedException {
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();
 		FlipkartGroceryPage flipkartgrocerypage = flipkartlandingpage.selectGrocery();
-		flipkartgrocerypage.deliveryTo("560037");
+		flipkartgrocerypage.deliveryTo(prop.getProperty("cartpageDeliveryPincode"));
 		flipkartgrocerypage.clickOnRandomGroceryImage();
 		String product = "AASHIRVAAD Atta with Multigrains";
 		FlipkartCartPage cartpage = flipkartgrocerypage.addToCart(product) ;

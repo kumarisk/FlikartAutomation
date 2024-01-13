@@ -15,12 +15,12 @@ public class FlipkartMobilesPageTest extends InvokeDriver{
 	@Test(groups= {"Smoke,Sanity"})
 	public void selectMobileFromDefaultList() throws InterruptedException {
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();
-		Object pageobj  = flipkartlandingpage.selectCategoryBasedOnInput("Mobiles");
-		  ((FlipkartMobilePage)pageobj).selectMobile("POCO");
+		Object pageobj  = flipkartlandingpage.selectCategoryBasedOnInput(prop.getProperty("selectmobilesCategory"));
+		  ((FlipkartMobilePage)pageobj).selectMobile(prop.getProperty("selectMobileBasedOnInput"));
 		
 		
 /*
@@ -39,12 +39,12 @@ public class FlipkartMobilesPageTest extends InvokeDriver{
 	@Test(groups= {"Smoke,Sanity"},retryAnalyzer = RetryFailedCases.class)
 	public void searchSpecificMobile() throws InterruptedException {
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();
 		FlipkartMobilePage flipkartmobilepage = flipkartlandingpage.selectMobiles();
-		flipkartmobilepage.searchSpecificMobile("iphone");
+		flipkartmobilepage.searchSpecificMobile(prop.getProperty("selectSpecificMobile"));
 		
 	}
 

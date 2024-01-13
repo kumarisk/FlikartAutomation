@@ -14,13 +14,13 @@ public class FlipkartElectronics_GamingAllTest extends InvokeDriver{
 	@Test
 	public void verifyproductlistIsDisplayed() throws InterruptedException {
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();	
-		flipkartlandingpage. hoverCategories("Electronics");
-		flipkartlandingpage.hoveredSubMenu("Gaming");
-		FlipkartElectronics_GamingAll gamingAl = flipkartlandingpage.subMenuLists("All");
+		flipkartlandingpage. hoverCategories(prop.getProperty("HoverOnElectronics"));
+		flipkartlandingpage.hoveredSubMenu(prop.getProperty("selectSubMenuFromElectronicsDropdown"));
+		FlipkartElectronics_GamingAll gamingAl = flipkartlandingpage.subMenuLists(prop.getProperty("selectCategoryFromElectronicsSubMenu"));
 		boolean status =gamingAl.productList();
 		Assert.assertTrue(status);
 		
@@ -29,13 +29,13 @@ public class FlipkartElectronics_GamingAllTest extends InvokeDriver{
 	@Test
 	public void selectRadomProductFromList() throws InterruptedException {
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();	
-		flipkartlandingpage. hoverCategories("Electronics");
-		flipkartlandingpage.hoveredSubMenu("Gaming");
-		FlipkartElectronics_GamingAll gamingAl = flipkartlandingpage.subMenuLists("All");
+		flipkartlandingpage. hoverCategories(prop.getProperty("HoverOnElectronics"));
+		flipkartlandingpage.hoveredSubMenu(prop.getProperty("selectSubMenuFromElectronicsDropdown"));
+		FlipkartElectronics_GamingAll gamingAl = flipkartlandingpage.subMenuLists(prop.getProperty("selectCategoryFromElectronicsSubMenu"));
 		gamingAl.productTitles("Gaming");
 		
 		

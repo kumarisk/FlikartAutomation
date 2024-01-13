@@ -13,13 +13,13 @@ public class FlipkartFashion_MenFootwear_All_Test extends InvokeDriver{
 	@Test
 	public void selectFashionMensFootwearAll() throws InterruptedException {
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();	
-		flipkartlandingpage. hoverCategories("Fashion");
-		flipkartlandingpage.hoveredSubMenu("Men Footwear");
-		flipkartlandingpage.subMenuLists("All");
+		flipkartlandingpage. hoverCategories(prop.getProperty("selectCategoryToHover"));
+		flipkartlandingpage.hoveredSubMenu(prop.getProperty("selectSubMenuToHover"));
+		flipkartlandingpage.subMenuLists(prop.getProperty("selectSubMenuCategory"));
 	}
 
 }

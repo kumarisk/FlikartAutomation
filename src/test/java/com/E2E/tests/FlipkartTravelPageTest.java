@@ -17,11 +17,11 @@ public class FlipkartTravelPageTest extends InvokeDriver{
 	@Test
 	public void verifyFromAddressFieldIsEnabled() throws InterruptedException {
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();
-		Object travelpagemethods  = flipkartlandingpage.selectCategoryBasedOnInput("Travel");
+		Object travelpagemethods  = flipkartlandingpage.selectCategoryBasedOnInput(prop.getProperty("selectTravelCategory"));
 		FlipkartTravelPage travel = (FlipkartTravelPage)travelpagemethods;
 		boolean fromactual = travel.fromAddressIsEnabled();
 		Assert.assertTrue(fromactual);
@@ -31,11 +31,11 @@ public class FlipkartTravelPageTest extends InvokeDriver{
 	@Test
 	public void verifyToAddressFieldIsEnabled() throws InterruptedException {
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();
-		Object travelpagemethods  = flipkartlandingpage.selectCategoryBasedOnInput("Travel");
+		Object travelpagemethods  = flipkartlandingpage.selectCategoryBasedOnInput(prop.getProperty("selectTravelCategory"));
 		FlipkartTravelPage travel = (FlipkartTravelPage)travelpagemethods;
 		boolean toactual = travel.toAddressIsEnabled();
 		Assert.assertTrue(toactual);
@@ -44,11 +44,11 @@ public class FlipkartTravelPageTest extends InvokeDriver{
 	@Test
 	public void verifyDepartureIsEnabled() throws InterruptedException {
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();
-		Object travelpagemethods  = flipkartlandingpage.selectCategoryBasedOnInput("Travel");
+		Object travelpagemethods  = flipkartlandingpage.selectCategoryBasedOnInput(prop.getProperty("selectTravelCategory"));
 		FlipkartTravelPage travel = (FlipkartTravelPage)travelpagemethods;
 		boolean depatureActual = travel.departureOnIsEnabled();
 		Assert.assertTrue(depatureActual);
@@ -58,11 +58,11 @@ public class FlipkartTravelPageTest extends InvokeDriver{
 	public void searchBasedOnDate() throws InterruptedException {
 		
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();
-		Object travelpagemethods  = flipkartlandingpage.selectCategoryBasedOnInput("Travel");
+		Object travelpagemethods  = flipkartlandingpage.selectCategoryBasedOnInput(prop.getProperty("selectTravelCategory"));
 		FlipkartTravelPage travel = (FlipkartTravelPage)travelpagemethods;
 		travel.selectFromAddressPO("hyd", "HYD");
 		travel.selectToAddressPO("ben", "BLR");

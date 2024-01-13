@@ -16,7 +16,7 @@ public class FlipkartLandingPageTest extends InvokeDriver{
 	@Test
 	public void verifyFlipkartlogo() throws InterruptedException {
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();
@@ -30,7 +30,7 @@ public class FlipkartLandingPageTest extends InvokeDriver{
 	public void ClickOnMobiles() throws InterruptedException {
 		String expectedtitle = "Mobiles- Buy Products Online at Best Price in India - All Categories | Flipkart.com";
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();
@@ -43,7 +43,7 @@ public class FlipkartLandingPageTest extends InvokeDriver{
 	public void selectMobileCategory() throws InterruptedException {
 		String expectedtitle = "Mobile Phones Online at Best Prices in India";
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();
@@ -57,7 +57,7 @@ public class FlipkartLandingPageTest extends InvokeDriver{
 	public void selectGroceryCategory() throws InterruptedException {
 		String expectedtitle = "Flipkart Grocery Store - Buy Groceries Online & Get Rs.1 Deals at Flipkart.com";
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();		
@@ -71,7 +71,7 @@ public class FlipkartLandingPageTest extends InvokeDriver{
 	@Test
 	public void gamingAllFromElectronicsCategory() throws InterruptedException {
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();	
@@ -85,7 +85,7 @@ public class FlipkartLandingPageTest extends InvokeDriver{
 	public void selectTravelCategory() throws InterruptedException {
 		String expectedtitle = "Flight Booking | Book Flight Tickets at Lowest Airfare on Flipkart.com";
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();		
@@ -100,7 +100,7 @@ public class FlipkartLandingPageTest extends InvokeDriver{
 	public void selectAppliancesCategory() throws InterruptedException {
 		String expectedtitle = "Tvs And Appliances New Clp Store Online - Buy Tvs And Appliances New Clp Online at Best Price in India | Flipkart.com";
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();		
@@ -114,7 +114,7 @@ public class FlipkartLandingPageTest extends InvokeDriver{
 	public void verifyribbonsIsDisplayed() throws InterruptedException {
 		String expectedtitle = "Mobiles- Buy Products Online at Best Price in India - All Categories | Flipkart.com";
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();		

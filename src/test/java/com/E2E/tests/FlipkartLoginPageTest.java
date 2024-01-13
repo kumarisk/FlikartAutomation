@@ -14,12 +14,12 @@ public class FlipkartLoginPageTest extends InvokeDriver{
 	public void loginToFlipkart() throws InterruptedException {
 		
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("flipkart");
+		landingpage.enterText(prop.getProperty("enterSiteName"));
 		SearchResultspage searchresultspage =landingpage.submitSearch();
 		FlipkartLandingPage flipkartlandingpage = searchresultspage.clickOnLink();
 		flipkartlandingpage.closeLoginWindow();	
 		FlipkartLoginPage loginpage = flipkartlandingpage.clickLoginbtn();
-		loginpage.enterMobileOrEmail("9857767833");
+		loginpage.enterMobileOrEmail(prop.getProperty("enterMobileNumber"));
 		
 		
 	}

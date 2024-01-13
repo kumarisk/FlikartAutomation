@@ -12,7 +12,7 @@ public class LandingPageTest extends InvokeDriver{
 	public void EnterTextInSearchField() throws InterruptedException {
 		
 		Landingpage landingpage = new Landingpage(driver);
-		landingpage.enterText("movies");
+		landingpage.enterText(prop.getProperty("enterSearchText"));
 		landingpage.submitSearch();
 		String urltitle = landingpage.getTitle();
 		System.out.println(urltitle);
